@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пятнашки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Пятнашки</h1>
+        <div class="switch-container">
+            <span>Числа</span>
+            <label class="switch">
+                <input type="checkbox" id="modeSwitch">
+                <span class="slider"></span>
+            </label>
+            <span>Картинка</span>
+        </div>
+        <div class="difficulty-select">
+            <label>Сложность:
+                <select id="difficulty">
+                    <option value="3">Низкая (3x3)</option>
+                    <option value="4" selected>Средняя (4x4)</option>
+                    <option value="5">Высокая (5x5)</option>
+                </select>
+            </label>
+        </div>
+        <div class="image-upload">
+            <input type="file" id="imageInput" accept="image/*">
+        </div>
+        <div class="board grid-4"></div>
+        <div class="moves">Ходов: <span id="moveCount">0</span></div>
+        <button id="btnNewGame">Новая игра</button>
+    </div>
+
+    <div id="winModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="cross">&times;</span>
+            <h2>Поздравляем!</h2>
+            <p id="winMessage"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+</html>
